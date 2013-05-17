@@ -1,8 +1,5 @@
-<h1>All the shirts!</h1>
 <%= form_tag "/search", method: "GET" do %>
   <%= label_tag :q, "Search" %>
   <%= text_field_tag :q %>
   <%= submit_tag "Search" %>
 <% end %>
-
-<%= render "list" %>
