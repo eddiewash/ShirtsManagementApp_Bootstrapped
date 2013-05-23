@@ -9,8 +9,12 @@ class ShirtsController < ApplicationController
 
   def create
     safe_params = params.require('shirt').permit(:name, :description, :image)
-    @shirt = Shirt.create(safe_params)
-    redirect_to @shirt
+    @shirt = Shirt.new(safe_params)
+    if @shirt.save
+      redirect_to @shirt
+    else
+      render 'new'
+    end
   end
 
   def search
