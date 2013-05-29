@@ -14,5 +14,6 @@
 <%= f.text_field :description %>
 <%= f.label :image %>
 <%= f.text_field :image %>
+<%= f.collection_select :vendor_id, @vendors, :id, :name %>
 <%= f.submit %>
 <% end %>

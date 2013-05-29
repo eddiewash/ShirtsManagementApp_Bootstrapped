@@ -7,6 +7,7 @@ class ShirtsController < ApplicationController
 
   def new
     @shirt = Shirt.new
+    @vendors = Vendor.all
   end
 
   def create
@@ -40,7 +41,7 @@ class ShirtsController < ApplicationController
   private
 
   def shirt_params
-    params.require('shirt').permit(:name, :description, :image)
+    params.require('shirt').permit(:name, :description, :image, :vendor_id)
   end
 
   def set_shirt

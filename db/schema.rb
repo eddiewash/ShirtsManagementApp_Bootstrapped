@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130515012818) do
+ActiveRecord::Schema.define(version: 20130529003919) do
 
   create_table "shirts", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "vendor_id"
+  end
+
+  add_index "shirts", ["vendor_id"], name: "index_shirts_on_vendor_id"
+
+  create_table "vendors", force: true do |t|
+    t.string   "name"
+    t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
