@@ -1,5 +1,7 @@
 <h1><%= link_to @vendor.name, @vendor.website %></h1>
 <h2>Shirts on the site include:</h2>
+<ul>
 <% @shirts.each do |shirt| %>
- <%= shirt.name %>
+ <li><%= link_to shirt.name, shirt %></li>
 <% end %>
+</ul>

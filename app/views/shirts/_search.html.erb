@@ -1,5 +1,4 @@
 <%= form_tag "/search", method: "GET" do %>
-  <%= label_tag :q, "Search" %>
-  <%= text_field_tag :q %>
+  <%= search_field_tag :q, "", placeholder: "Search" %>
   <%= submit_tag "Search" %>
 <% end %>

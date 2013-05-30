@@ -1,6 +1,10 @@
 <h1><%= @shirt.name %></h1>
-<p><%= @shirt.description %></p>
+<h2><%= @shirt.description %></h2>
 <%= image_tag @shirt.image %>
-<%= @shirt.vendor.name %>
-
-<%= link_to "Edit", edit_shirt_path(@shirt) %>
+<h2 style="font-size:25px;text-decoration:none">
+<%= link_to @shirt.vendor.name, vendor_path %>
+</h2>
+<p>
+<button class="btn"><%= link_to "Edit", edit_shirt_path(@shirt) %></button>
+<button class="btn"><%= link_to "Back", shirts_path %></button>
+</p>
