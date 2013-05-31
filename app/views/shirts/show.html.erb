@@ -1,8 +1,8 @@
 <h1><%= @shirt.name %></h1>
 <h2><%= @shirt.description %></h2>
 <%= image_tag @shirt.image %>
-<h2 style="font-size:25px;text-decoration:none">
-<%= link_to @shirt.vendor.name, vendor_path %>
+<h2 style="color:#000000">
+Made by: <%= link_to @shirt.vendor.name, vendor_path %>
 </h2>
 <p>
 <button class="btn"><%= link_to "Edit", edit_shirt_path(@shirt) %></button>

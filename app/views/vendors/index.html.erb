@@ -1,6 +1,7 @@
 <h1>Vendors</h1>
 <ol>
 <% @vendors.each do |vendor| %>
- <li><%= link_to vendor.name, vendor.website %></li>
+ <li><%= link_to vendor.name, vendor %></li>
+ <p style="color:#ff0054">Find us at <%= link_to vendor.website, vendor.website %></p>
 <% end %>
 </ol>

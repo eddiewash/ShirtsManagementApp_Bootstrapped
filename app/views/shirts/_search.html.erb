@@ -1,4 +1,6 @@
-<%= form_tag "/search", method: "GET" do %>
-  <%= search_field_tag :q, "", placeholder: "Search" %>
-  <%= submit_tag "Search" %>
+<%= form_tag "/search", method: "GET", class: "form-search navbar-search pull-right" do %>
+  <div class="input-append">
+    <%= search_field_tag :q, "", class: "input-medium search-query" %>
+    <%= submit_tag "Search", class: "btn" %>
+  </div>
 <% end %>

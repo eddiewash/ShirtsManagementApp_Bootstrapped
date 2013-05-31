@@ -1,7 +1,14 @@
 <h1><%= link_to @vendor.name, @vendor.website %></h1>
 <h2>Shirts on the site include:</h2>
-<ul>
-<% @shirts.each do |shirt| %>
- <li><%= link_to shirt.name, shirt %></li>
-<% end %>
+
+<ul class="thumbnails">
+  <% @shirts.each do |shirt| %>
+  <li class="span4" style="margin:0; height: 400px; padding:5px;">
+    <div class="thumbnail">
+      <%= link_to image_tag(shirt.image), shirt %>
+      <h3><%= shirt.name %></h3>
+      <h4><%= shirt.description %></h4>
+    </div>
+  </li>
+  <% end %>
 </ul>

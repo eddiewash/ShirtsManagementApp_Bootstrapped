@@ -20,6 +20,7 @@ class ShirtsController < ApplicationController
   end
 
   def edit
+    @vendors = Vendor.all
   end
 
   def update
